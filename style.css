@@ -1,51 +1,120 @@
 /* style.css */
 :root {
   --bg: #0d1117;
-  --fg: #c9d1d9;
-  --accent: #58a6ff;
-  --nav-bg: #161b22;
-  --hover-bg: #21262d;
+  --fg: #e5e7eb;
+  --blue: #0ea5e9;
+  --yellow: #facc15;
+  --card-bg: #1f2937;
+  --accent-hover: #fcd34d;
 }
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  padding: 0;
   background-color: var(--bg);
   color: var(--fg);
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
 }
 
 header {
-  background-color: var(--nav-bg);
-  padding: 1rem;
-  text-align: center;
+  background-color: var(--bg);
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #2c2c2c;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--blue);
 }
 
 nav a {
-  margin: 0 1rem;
-  color: var(--fg);
+  margin-left: 1rem;
   text-decoration: none;
+  color: var(--fg);
   padding: 0.5rem;
   border-radius: 4px;
+  transition: background 0.2s;
 }
 
-nav a:hover {
-  background-color: var(--hover-bg);
-}
-
+nav a:hover,
 nav a.active {
-  color: var(--accent);
-  font-weight: bold;
+  background-color: var(--card-bg);
+  color: var(--yellow);
 }
 
 main {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  padding: 3rem 1.5rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: var(--blue);
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--fg);
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.service-card {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card h3 {
+  color: var(--yellow);
+  margin-bottom: 0.5rem;
+}
+
+.cta {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.cta a {
+  display: inline-block;
+  background-color: var(--blue);
+  color: #000;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.cta a:hover {
+  background-color: var(--accent-hover);
 }
 
 footer {
   text-align: center;
+  padding: 2rem 1rem;
   font-size: 0.9rem;
-  padding: 2rem 0;
-  color: #777;
+  color: #888;
 }

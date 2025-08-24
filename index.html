@@ -16,6 +16,8 @@
   <style>
     body, h1, h2, h3, h4, h5 {
       font-family: "Raleway", sans-serif;
+      color: #f1f1f1;
+      background-color: #000; /* Overall page background */
     }
 
     .hero-image {
@@ -28,22 +30,58 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: white;
       text-align: center;
     }
 
     .hero-text {
-      background-color: rgba(0, 0, 0, 0.6);
+      background-color: rgba(10, 25, 47, 0.7); /* Deep blue overlay */
       padding: 40px;
       border-radius: 8px;
     }
 
+    .w3-bar {
+      background-color: #0a192f !important; /* Deep blue nav bar */
+    }
+
     .w3-bar .w3-button {
       padding: 16px;
+      color: #fff;
+    }
+
+    .w3-bar .w3-button:hover {
+      background-color: #007BFF;
+      color: white;
     }
 
     .section-padding {
       padding: 64px 16px;
+    }
+
+    .w3-container {
+      background-color: #0a192f;
+    }
+
+    .w3-white, .w3-light-grey {
+      background-color: #0a192f !important;
+    }
+
+    a, p, li {
+      color: #ccc;
+    }
+
+    a:hover {
+      color: #007BFF;
+    }
+
+    .w3-button.w3-blue {
+      background-color: #007BFF;
+      color: white;
+    }
+
+    .w3-button.w3-blue:hover {
+      background-color: transparent;
+      border: 1px solid #007BFF;
+      color: #007BFF;
     }
 
     html {
@@ -55,12 +93,12 @@
 
 <!-- Navbar -->
 <div class="w3-top">
-  <div class="w3-bar w3-black w3-card">
-    <a href="#home" class="w3-bar-item w3-button w3-padding-large">NA</a>
+  <div class="w3-bar w3-card">
+    <a href="#home" class="w3-bar-item w3-button">NA</a>
     <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button w3-padding-large">About</a>
-      <a href="#services" class="w3-bar-item w3-button w3-padding-large">Services</a>
-      <a href="#contact" class="w3-bar-item w3-button w3-padding-large">Contact</a>
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="#services" class="w3-bar-item w3-button">Services</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
     </div>
   </div>
 </div>
@@ -74,17 +112,17 @@
 </header>
 
 <!-- About Section -->
-<div class="w3-container w3-light-grey section-padding" id="about" data-aos="fade-up">
+<div class="w3-container section-padding" id="about" data-aos="fade-up">
   <h2>About Nova Analytics</h2>
   <p>We build small automation tools for Excel users, analyze data for smarter decision-making, and teach Python, R, and SQL to beginners. Our mission is to empower people to work smarter with data.</p>
 </div>
 
 <!-- Services Section -->
-<div class="w3-container w3-white section-padding" id="services">
+<div class="w3-container section-padding" id="services">
   <h2 class="w3-center" data-aos="fade-up">Our Services</h2>
   <div class="w3-row-padding" style="margin-top:64px">
     <div class="w3-third w3-center" data-aos="fade-up" data-aos-delay="100">
-      <i class="fa fa-cogs w3-margin-bottom w3-jumbo w3-center"></i>
+      <i class="fa fa-cogs w3-margin-bottom w3-jumbo"></i>
       <p class="w3-large">Excel Automation</p>
       <p>Create easy-to-use tools to replace repetitive spreadsheet work.</p>
     </div>
@@ -101,8 +139,8 @@
   </div>
 </div>
 
-<!-- Contact Section (Info Only) -->
-<div class="w3-container w3-light-grey section-padding" id="contact" data-aos="fade-up">
+<!-- Contact Section -->
+<div class="w3-container section-padding" id="contact" data-aos="fade-up">
   <h2>Contact Us</h2>
   <p>We're happy to hear from you. Reach out via email or follow us on LinkedIn.</p>
   <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-blue"></i> info@novaanalytics.sk</p>
@@ -111,8 +149,8 @@
 </div>
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64" data-aos="fade-up">
-  <a href="#home" class="w3-button w3-light-grey">
+<footer class="w3-center w3-padding-64" data-aos="fade-up" style="background-color:#0a192f">
+  <a href="#home" class="w3-button w3-blue w3-hover-opacity">
     <i class="fa fa-arrow-up w3-margin-right"></i>Back to Top
   </a>
   <div class="w3-xlarge w3-section">

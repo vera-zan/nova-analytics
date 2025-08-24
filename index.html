@@ -4,9 +4,15 @@
   <title>Nova Analytics</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- W3.CSS & Fonts -->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- AOS: Animate On Scroll -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   <style>
     body, h1, h2, h3, h4, h5 {
       font-family: "Raleway", sans-serif;
@@ -21,7 +27,7 @@
 <!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card">
-    <a href="#home" class="w3-bar-item w3-button w3-padding-large">Nova Analytics</a>
+    <a href="#home" class="w3-bar-item w3-button w3-padding-large">NA</a>
     <div class="w3-right w3-hide-small">
       <a href="#about" class="w3-bar-item w3-button w3-padding-large">About</a>
       <a href="#services" class="w3-bar-item w3-button w3-padding-large">Services</a>
@@ -32,32 +38,32 @@
 
 <!-- Hero -->
 <header class="w3-container w3-blue w3-center" style="padding:128px 16px" id="home">
-  <h1 class="w3-margin w3-jumbo">Nova Analytics</h1>
-  <p class="w3-xlarge">Automate. Analyze. Empower.</p>
-  <a href="#contact" class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get in Touch</a>
+  <h1 class="w3-margin w3-jumbo w3-animate-opacity">Nova Analytics</h1>
+  <p class="w3-xlarge" data-aos="fade-down">Automate. Analyze. Empower.</p>
+  <a href="#contact" class="w3-button w3-black w3-padding-large w3-large w3-margin-top w3-hover-opacity">Get in Touch</a>
 </header>
 
 <!-- About Section -->
-<div class="w3-container w3-padding-64 w3-light-grey" id="about">
+<div class="w3-container w3-padding-64 w3-light-grey" id="about" data-aos="fade-up">
   <h2>About Nova Analytics</h2>
   <p>We build small automation tools for Excel users, analyze data for smarter decision-making, and teach Python, R, and SQL to beginners. Our mission is to empower people to work smarter with data.</p>
 </div>
 
 <!-- Services Section -->
 <div class="w3-container w3-padding-64 w3-white" id="services">
-  <h2 class="w3-center">Our Services</h2>
+  <h2 class="w3-center" data-aos="fade-up">Our Services</h2>
   <div class="w3-row-padding" style="margin-top:64px">
-    <div class="w3-third w3-center">
+    <div class="w3-third w3-center" data-aos="fade-up" data-aos-delay="100">
       <i class="fa fa-cogs w3-margin-bottom w3-jumbo w3-center"></i>
       <p class="w3-large">Excel Automation</p>
       <p>Create easy-to-use tools to replace repetitive spreadsheet work.</p>
     </div>
-    <div class="w3-third w3-center">
+    <div class="w3-third w3-center" data-aos="fade-up" data-aos-delay="200">
       <i class="fa fa-bar-chart w3-margin-bottom w3-jumbo"></i>
       <p class="w3-large">Data Analysis</p>
       <p>Get insights from your data with clear visuals and reports.</p>
     </div>
-    <div class="w3-third w3-center">
+    <div class="w3-third w3-center" data-aos="fade-up" data-aos-delay="300">
       <i class="fa fa-graduation-cap w3-margin-bottom w3-jumbo"></i>
       <p class="w3-large">Training</p>
       <p>Learn Python, R, and SQL from the ground up in beginner-friendly courses.</p>
@@ -66,7 +72,7 @@
 </div>
 
 <!-- Contact Section -->
-<div class="w3-container w3-padding-64 w3-light-grey" id="contact">
+<div class="w3-container w3-padding-64 w3-light-grey" id="contact" data-aos="zoom-in">
   <h2>Contact Us</h2>
   <p>Interested in working together or learning more? Send us a message:</p>
   <form action="mailto:your@email.com" method="post" enctype="text/plain">
@@ -83,8 +89,10 @@
 </div>
 
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64">
-  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Back to Top</a>
+<footer class="w3-center w3-black w3-padding-64" data-aos="fade-up">
+  <a href="#home" class="w3-button w3-light-grey">
+    <i class="fa fa-arrow-up w3-margin-right"></i>Back to Top
+  </a>
   <div class="w3-xlarge w3-section">
     <i class="fa fa-github w3-hover-opacity"></i>
     <i class="fa fa-linkedin w3-hover-opacity"></i>
@@ -92,6 +100,15 @@
   </div>
   <p>© 2025 Nova Analytics</p>
 </footer>
+
+<!-- AOS Script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    once: true,        // Animates only once
+    duration: 1000     // 1s animation
+  });
+</script>
 
 </body>
 </html>

@@ -4,7 +4,7 @@
   <title>Nova Analytics</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <!-- W3.CSS & Fonts -->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
@@ -17,8 +17,37 @@
     body, h1, h2, h3, h4, h5 {
       font-family: "Raleway", sans-serif;
     }
+
+    .hero-image {
+      background-image: url("data_title.jpg");
+      height: 100vh;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+
+    .hero-text {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 8px;
+    }
+
     .w3-bar .w3-button {
       padding: 16px;
+    }
+
+    .section-padding {
+      padding: 64px 16px;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
   </style>
 </head>
@@ -36,21 +65,22 @@
   </div>
 </div>
 
-<!-- Hero -->
-<header class="w3-container w3-blue w3-center" style="padding:128px 16px" id="home">
-  <h1 class="w3-margin w3-jumbo w3-animate-opacity">Nova Analytics</h1>
-  <p class="w3-xlarge" data-aos="fade-down">Automate. Analyze. Empower.</p>
-  <a href="#contact" class="w3-button w3-black w3-padding-large w3-large w3-margin-top w3-hover-opacity">Get in Touch</a>
+<!-- Hero Section -->
+<header class="hero-image" id="home">
+  <div class="hero-text">
+    <h1 class="w3-jumbo w3-animate-opacity">Start something that matters</h1>
+    <p class="w3-large" data-aos="fade-up" data-aos-delay="200">Automate. Analyze. Empower.</p>
+  </div>
 </header>
 
 <!-- About Section -->
-<div class="w3-container w3-padding-64 w3-light-grey" id="about" data-aos="fade-up">
+<div class="w3-container w3-light-grey section-padding" id="about" data-aos="fade-up">
   <h2>About Nova Analytics</h2>
   <p>We build small automation tools for Excel users, analyze data for smarter decision-making, and teach Python, R, and SQL to beginners. Our mission is to empower people to work smarter with data.</p>
 </div>
 
 <!-- Services Section -->
-<div class="w3-container w3-padding-64 w3-white" id="services">
+<div class="w3-container w3-white section-padding" id="services">
   <h2 class="w3-center" data-aos="fade-up">Our Services</h2>
   <div class="w3-row-padding" style="margin-top:64px">
     <div class="w3-third w3-center" data-aos="fade-up" data-aos-delay="100">
@@ -71,21 +101,13 @@
   </div>
 </div>
 
-<!-- Contact Section -->
-<div class="w3-container w3-padding-64 w3-light-grey" id="contact" data-aos="zoom-in">
+<!-- Contact Section (Info Only) -->
+<div class="w3-container w3-light-grey section-padding" id="contact" data-aos="fade-up">
   <h2>Contact Us</h2>
-  <p>Interested in working together or learning more? Send us a message:</p>
-  <form action="mailto:your@email.com" method="post" enctype="text/plain">
-    <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-    <br>
-    <input class="w3-input w3-border" type="email" placeholder="Email" required name="Email">
-    <br>
-    <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
-    <br>
-    <button class="w3-button w3-blue w3-margin-top" type="submit">
-      <i class="fa fa-paper-plane"></i> Send
-    </button>
-  </form>
+  <p>We're happy to hear from you. Reach out via email or follow us on LinkedIn.</p>
+  <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-blue"></i> info@novaanalytics.sk</p>
+  <p><i class="fa fa-map-marker fa-fw w3-margin-right w3-large w3-text-blue"></i> Bratislava, Slovakia</p>
+  <p><i class="fa fa-linkedin fa-fw w3-margin-right w3-large w3-text-blue"></i> <a href="#" target="_blank">LinkedIn Profile</a></p>
 </div>
 
 <!-- Footer -->
@@ -105,8 +127,8 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init({
-    once: true,        // Animates only once
-    duration: 1000     // 1s animation
+    once: true,
+    duration: 1000
   });
 </script>
 
